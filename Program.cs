@@ -5,7 +5,7 @@ namespace Personnel_Accounting
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             const string AddDossierCommand = "1";
             const string CommandToDisplayAllDossiers = "2";
