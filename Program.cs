@@ -80,13 +80,12 @@ namespace Personnel_Accounting
         private static void DeleteDossier(List<string> fullNames, List<string> positions)
         {
             Console.Write("Введите номер досье :");
-            int number = int.Parse(Console.ReadLine());
 
-            if (number > 0 && number <= fullNames.Count)
+            if (int.TryParse(Console.ReadLine(), out int number) && number <= positions.Count && number >= 0)
             {
                 int index = number - 1;
-                fullNames.RemoveAt(number);
-                positions.RemoveAt(number);
+                fullNames.RemoveAt(index);
+                positions.RemoveAt(index);
                 Console.WriteLine($"Досье с индексом [ {number} ] удалено!!!");
             }
             else
